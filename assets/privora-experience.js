@@ -188,6 +188,14 @@
   motionPreference.addEventListener('change', event => {
     if (event.matches) { animations.forEach(animation => animation.cancel()); animations.clear(); }
   });
+  // Tap outside the open mobile menu to close it smoothly. Reuse the
+  // existing toggle listener to keep aria-expanded and body state in sync.
+  document.addEventListener('pointerdown', event => {
+    const header = document.querySelector('.site-header, .prv-home-header');
+    if (!header || header.contains(event.target)) return;
+    const toggle = header.querySelector('.menu-toggle, .prv-header-toggle');
+    if (toggle?.getAttribute('aria-expanded') === 'true') toggle.click();
+  });
   // Scroll reveals are managed by privora-smooth-motion.js across all pages.
   heroes.forEach(hero => { enterHero(hero); if (hero.matches('.hero-slider')) initSlider(hero); });
 })();
