@@ -1,0 +1,28 @@
+/* PRIVORA – Kontakt / Über uns photos, slightly shorter hero for both pages. */
+.page-hero--photo {
+  padding: 48px 0 50px; /* slightly shorter than the default 62px 0 65px */
+  background-color: #ecf4fb;
+  background-image:
+    linear-gradient(90deg, rgba(239,247,254,.89) 0%, rgba(243,249,255,.73) 37%, rgba(255,255,255,.08) 76%),
+    var(--prv-page-photo);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.page-hero--kontakt { --prv-page-photo: url('hero-kontakt-privora.webp'); }
+.page-hero--ueber-uns { --prv-page-photo: url('hero-ueber-uns-privora.webp'); }
+/* Remove the old decorative circle so the photo stays visible. */
+.page-hero--photo::after { display: none; }
+.page-hero--photo h1 { color: #071c38; text-shadow: 0 1px 12px rgba(255,255,255,.2); }
+.page-hero--photo p { color: #283f56; }
+.page-hero--photo .breadcrumbs { color: #465f78; }
+.page-hero--photo .eyebrow { color: #124782; }
+@media (max-width: 700px) {
+  .page-hero--photo {
+    padding: 25px 0 34px; /* keep the phone layout compact */
+    background-image:
+      linear-gradient(90deg, rgba(243,249,255,.98) 0%, rgba(243,249,255,.94) 42%, rgba(243,249,255,.82) 76%, rgba(243,249,255,.60) 100%),
+      var(--prv-page-photo);
+    background-position: 67% center;
+  }
+}

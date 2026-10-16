@@ -1,0 +1,115 @@
+/* PRIVORA Leistungen: the cleaning photograph fills the entire hero edge-to-edge. */
+#start.prv-leistungen-hero {
+  position:relative;isolation:isolate;overflow:hidden;
+  display:flex;align-items:center;min-height:660px;margin-top:88px;
+  padding:clamp(62px,6vw,92px) 0 clamp(64px,7vw,104px);
+  background:#061d38;color:#fff;
+}
+#start.prv-leistungen-hero .prv-lhero-visual {
+  position:absolute;inset:0;z-index:0;height:100%;width:100%;
+  overflow:hidden;border:0;box-shadow:none;border-radius:0;background:#0b2443;
+}
+#start.prv-leistungen-hero .prv-lhero-visual img {
+  display:block;width:100%;height:100%;min-height:0;max-width:none;
+  object-fit:cover;object-position:center 56%;filter:saturate(1.06);
+}
+#start.prv-leistungen-hero::before {
+  content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,
+    rgba(2,18,37,.97) 0%,
+    rgba(2,23,47,.95) 26%,
+    rgba(3,25,49,.84) 41%,
+    rgba(4,29,54,.48) 68%,
+    rgba(4,29,54,.14) 100%),
+    linear-gradient(0deg,rgba(3,20,40,.45) 0%,transparent 48%);
+}
+#start.prv-leistungen-hero .prv-lhero-layout {
+  position:relative;z-index:2;display:block;
+  width:min(calc(100% - 44px),1180px);max-width:1180px;
+  margin:0 auto;
+}
+#start.prv-leistungen-hero .prv-lhero-content {width:min(100%,680px);position:relative;z-index:2;}
+#start.prv-leistungen-hero .prv-lhero-crumb {
+  display:flex;align-items:center;gap:12px;margin-bottom:44px;
+  color:#d3e4f8;font-size:13px;font-weight:650;letter-spacing:.02em;
+}
+#start.prv-leistungen-hero .prv-lhero-crumb a{color:#e8f4ff;text-decoration:none;}
+#start.prv-leistungen-hero .prv-lhero-crumb a:hover{text-decoration:underline;}
+#start.prv-leistungen-hero .prv-lhero-crumb span[aria-hidden]{color:#7dbbff;}
+#start.prv-leistungen-hero .prv-lhero-eyebrow{
+  display:flex;align-items:center;gap:12px;margin-bottom:21px;
+  color:#98cbff;font-size:11px;font-weight:850;letter-spacing:.22em;
+}
+#start.prv-leistungen-hero .prv-lhero-eyebrow-line {display:block;width:36px;height:3px;background:#268bff;}
+#start.prv-leistungen-hero h1 {
+  margin:0 0 24px!important;font-size:clamp(53px,6vw,85px)!important;
+  font-weight:850!important;line-height:1.03!important;letter-spacing:-.055em!important;
+  color:#fff!important;hyphens:none!important;text-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+#start.prv-leistungen-hero h1 span {color:#65b1ff!important;}
+#start.prv-leistungen-hero .prv-lhero-content > p {
+  max-width:620px;margin:0 0 32px;color:#e0eafa;font-size:clamp(16px,1.55vw,20px);line-height:1.7;
+}
+#start.prv-leistungen-hero .prv-lhero-buttons{display:flex;gap:13px;flex-wrap:wrap;align-items:center;}
+#start.prv-leistungen-hero .prv-lhero-cta {
+  display:inline-flex;justify-content:center;align-items:center;gap:24px;
+  min-height:54px;padding:14px 21px;border-radius:9px;
+  text-decoration:none;font-size:14px;font-weight:800;
+  transition:background .2s,transform .2s,border-color .2s;
+}
+#start.prv-leistungen-hero .prv-lhero-cta:hover{transform:translateY(-2px);}
+#start.prv-leistungen-hero .prv-lhero-cta:focus-visible{outline:3px solid #9cd0ff;outline-offset:3px;}
+#start.prv-leistungen-hero .prv-lhero-primary {background:#0878f3;color:#fff;border:1px solid #0878f3;}
+#start.prv-leistungen-hero .prv-lhero-primary:hover{background:#3195fc;}
+#start.prv-leistungen-hero .prv-lhero-secondary {background:rgba(3,24,51,.26);color:#fff;border:1px solid rgba(255,255,255,.59);}
+#start.prv-leistungen-hero .prv-lhero-secondary:hover{background:rgba(255,255,255,.12);border-color:#fff;}
+#start.prv-leistungen-hero .prv-lhero-cta span{font-size:18px;font-weight:400;}
+#start.prv-leistungen-hero .prv-lhero-trust{display:flex;flex-wrap:wrap;gap:13px 24px;margin-top:37px;font-size:13px;color:#e1ebfa;font-weight:700;}
+#start.prv-leistungen-hero .prv-lhero-trust span{display:flex;align-items:center;gap:8px;}
+#start.prv-leistungen-hero .prv-lhero-trust b{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:rgba(35,126,255,.4);color:#a7d3ff;font-size:12px;}
+#start.prv-leistungen-hero .prv-lhero-image-label{
+  position:absolute;right:max(23px,calc((100vw - 1180px)/2));bottom:30px;z-index:2;
+  display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:12px;
+  color:#fff;background:rgba(5,22,42,.68);backdrop-filter:blur(7px);
+  box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+#start.prv-leistungen-hero .prv-lhero-image-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:10px;background:#167ff7;font-size:22px;}
+#start.prv-leistungen-hero .prv-lhero-image-label strong{display:block;font-weight:800;font-size:14px;}
+#start.prv-leistungen-hero .prv-lhero-image-label small{display:block;margin-top:3px;color:#ecf5ff;font-size:11px;}
+#start.prv-leistungen-hero .prv-lhero-bottomline{position:absolute;inset:auto 0 0;z-index:3;height:3px;background:linear-gradient(90deg,#0e78ef,#65b6ff 45%,transparent 85%);}
+@media(max-width:980px){
+  #start.prv-leistungen-hero{min-height:630px;}
+  #start.prv-leistungen-hero .prv-lhero-content{width:min(100%,620px);}
+  #start.prv-leistungen-hero::before{background:linear-gradient(90deg,rgba(2,18,37,.97) 0%,rgba(2,23,47,.93) 46%,rgba(3,25,49,.45) 100%),linear-gradient(0deg,rgba(3,20,40,.32),transparent 55%);}
+  #start.prv-leistungen-hero h1{font-size:clamp(49px,7vw,72px)!important;}
+}
+@media(max-width:900px){#start.prv-leistungen-hero{margin-top:77px;}}
+@media(max-width:720px){
+  #start.prv-leistungen-hero{
+    display:block;min-height:690px;margin-top:73px;padding:32px 0 62px;
+  }
+  #start.prv-leistungen-hero .prv-lhero-layout{width:min(calc(100% - 34px),550px);}
+  #start.prv-leistungen-hero .prv-lhero-visual img{object-position:66% center;}
+  #start.prv-leistungen-hero::before{
+    background:linear-gradient(180deg,
+      rgba(3,19,39,.96) 0%,rgba(3,19,39,.88) 32%,
+      rgba(3,19,39,.78) 65%,rgba(3,19,39,.48) 100%),
+      linear-gradient(90deg,rgba(3,19,39,.30),transparent 100%);
+  }
+  #start.prv-leistungen-hero .prv-lhero-crumb{margin-bottom:46px;font-size:12px;}
+  #start.prv-leistungen-hero .prv-lhero-eyebrow{font-size:10px;letter-spacing:.15em;margin-bottom:18px;}
+  #start.prv-leistungen-hero h1{font-size:clamp(43px,10.6vw,61px)!important;margin-bottom:21px!important;line-height:1.1!important;}
+  #start.prv-leistungen-hero .prv-lhero-content > p{font-size:16px;line-height:1.7;margin-bottom:27px;}
+  #start.prv-leistungen-hero .prv-lhero-buttons{gap:10px;}
+  #start.prv-leistungen-hero .prv-lhero-cta{min-height:49px;padding:13px 14px;font-size:13px;gap:12px;}
+  #start.prv-leistungen-hero .prv-lhero-trust{margin-top:29px;gap:12px 17px;font-size:12px;}
+  #start.prv-leistungen-hero .prv-lhero-image-label{display:none;}
+}
+@media(max-width:390px){
+  #start.prv-leistungen-hero{min-height:690px;}
+  #start.prv-leistungen-hero h1{font-size:clamp(39px,10vw,45px)!important;}
+  #start.prv-leistungen-hero .prv-lhero-crumb{margin-bottom:39px;}
+  #start.prv-leistungen-hero .prv-lhero-buttons{flex-direction:column;align-items:stretch;}
+  #start.prv-leistungen-hero .prv-lhero-cta{width:100%;justify-content:space-between;}
+}
+@media(prefers-reduced-motion:reduce){#start.prv-leistungen-hero .prv-lhero-cta{transition:none;}}

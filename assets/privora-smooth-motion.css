@@ -1,0 +1,105 @@
+/* PRIVORA / smooth, staged entrances inspired by the BABIN BAU browsing experience.
+   Progressive enhancement only: without JS every element remains visible. */
+:root {
+  --prv-motion-ease: cubic-bezier(.22, 1, .36, 1);
+  --prv-motion-time: 940ms;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 105px;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+/* Smooth anchors, cards and media without distracting scroll hijacking. */
+:is(.btn, .imported-service-link, .text-link, .site-nav a, .prv-footer-column a) {
+  transition-property: color, background-color, border-color, transform, box-shadow, opacity;
+  transition-duration: .35s;
+  transition-timing-function: var(--prv-motion-ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  :is(.imported-service-card, .imported-value-card, .service-card, .object-card,
+      .problem-card, .value-item, .mn-solution-item, .next-step-reference-card,
+      .trust-item, .step) {
+    transition: transform .5s var(--prv-motion-ease), box-shadow .5s var(--prv-motion-ease);
+  }
+  :is(.imported-service-card, .service-card, .object-card,
+      .problem-card, .next-step-reference-card):hover {
+    transform: translateY(-5px);
+  }
+  :is(.imported-service-card, .object-card, .service-card) img {
+    transition: transform .75s var(--prv-motion-ease);
+  }
+  :is(.imported-service-card, .object-card, .service-card):hover img {
+    transform: scale(1.045);
+  }
+  :is(.btn, .imported-service-link, .text-link):hover {
+    translate: 0 -2px;
+  }
+}
+/* A single coherent scroll reveal system on every website page. */
+html.prv-motion-enabled .prv-motion-item {
+  opacity: 0;
+  transform: translate3d(0, 31px, 0);
+  transition:
+    opacity var(--prv-motion-time) var(--prv-motion-ease),
+    transform var(--prv-motion-time) var(--prv-motion-ease);
+  transition-delay: var(--prv-motion-delay, 0ms);
+}
+html.prv-motion-enabled .prv-motion-item.prv-motion-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+/* Animations on photos are kept subtle, and never interfere with layout. */
+html.prv-motion-enabled .prv-motion-item.prv-motion-image {
+  transform: translate3d(0, 23px, 0) scale(.985);
+}
+html.prv-motion-enabled .prv-motion-item.prv-motion-image.prv-motion-visible {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+/* Keep viewport-based reveals quick and crisp on smaller devices. */
+@media (max-width: 700px) {
+  :root { --prv-motion-time: 760ms; }
+  html { scroll-padding-top: 82px; }
+  html.prv-motion-enabled .prv-motion-item {
+    transform: translate3d(0, 22px, 0);
+  }
+  html.prv-motion-enabled .prv-motion-item.prv-motion-image {
+    transform: translate3d(0, 16px, 0) scale(.99);
+  }
+  html.prv-motion-enabled .prv-motion-item.prv-motion-visible {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+/* Honor people who request less animation; scrolling and content remain available. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  html.prv-motion-enabled .prv-motion-item,
+  html.prv-motion-enabled .prv-motion-item.prv-motion-image {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  :is(.btn, .imported-service-card, .object-card, .service-card, .imported-service-card img) {
+    transition: none !important;
+  }
+}
+@media print {
+  html.prv-motion-enabled .prv-motion-item { opacity: 1 !important; transform: none !important; }
+}
+
+/* Hover still works after an element has completed its entrance reveal. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html.prv-motion-enabled .prv-motion-item:is(.imported-service-card, .service-card,
+    .object-card, .problem-card, .next-step-reference-card).prv-motion-visible {
+    transition:
+      opacity var(--prv-motion-time) var(--prv-motion-ease),
+      transform var(--prv-motion-time) var(--prv-motion-ease),
+      translate .4s var(--prv-motion-ease),
+      box-shadow .45s var(--prv-motion-ease);
+  }
+  html.prv-motion-enabled .prv-motion-item:is(.imported-service-card, .service-card,
+    .object-card, .problem-card, .next-step-reference-card).prv-motion-visible:hover {
+    translate: 0 -5px;
+  }
+}

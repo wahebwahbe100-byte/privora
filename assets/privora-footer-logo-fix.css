@@ -1,0 +1,196 @@
+/* PRIVORA: unified header logo and complete, responsive bottom bar. */
+.site-header .brand-combined,
+.prv-home-header .prv-brand-combined {
+  display:block;
+  width:232px;
+  max-width:100%;
+  height:auto;
+  max-height:64px;
+  object-fit:contain;
+  flex-shrink:0;
+}
+.site-header .brand,
+.prv-home-header .prv-brand { min-width:0; }
+
+/* The dark footer background is full-bleed; only its content stays aligned. */
+.site-footer,
+.privora-footer {
+  box-sizing:border-box;
+  display:block;
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+  color:#fff;
+  background:linear-gradient(135deg,#061b34 0%,#07284d 100%);
+  border-top:1px solid #173a62;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  line-height:1.5;
+}
+.site-footer *, .privora-footer * {box-sizing:border-box;}
+.site-footer::before,
+.privora-footer::before {
+  content:"";
+  position:absolute;
+  width:470px;
+  height:470px;
+  border:16px solid rgba(18,105,213,.22);
+  border-radius:50%;
+  right:-170px;
+  top:-265px;
+  pointer-events:none;
+  z-index:-1;
+}
+.site-footer > .container,
+.privora-footer .privora-footer-inner {
+  width:min(1180px,calc(100% - 64px));
+  max-width:none;
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+}
+.site-footer .footer-main,
+.privora-footer .privora-footer-main {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px 38px;
+  min-width:0;
+  padding:37px 0 33px;
+}
+.site-footer .footer-brand,
+.privora-footer .privora-footer-brand {
+  display:inline-flex;
+  flex:none;
+  align-items:center;
+  gap:13px;
+  min-width:0;
+  font-size:1.3rem;
+  font-weight:750;
+  letter-spacing:.12em;
+  line-height:1.15;
+  text-decoration:none;
+  color:#fff;
+}
+.site-footer .footer-mark,
+.privora-footer .privora-footer-brand > img {
+  display:block;
+  width:47px;
+  height:55px;
+  max-width:47px;
+  object-fit:contain;
+  flex:none;
+}
+.site-footer .footer-word,
+.privora-footer .privora-footer-brand > span { display:block; font-size:inherit; line-height:inherit; letter-spacing:inherit; font-weight:inherit; }
+.site-footer .footer-word small,
+.privora-footer .privora-footer-brand small {
+  display:block;
+  margin-top:6px;
+  font-size:.52rem;
+  font-weight:500;
+  letter-spacing:.115em;
+  white-space:nowrap;
+}
+.site-footer .footer-links,
+.privora-footer .privora-footer-main nav {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:flex-end;
+  gap:13px 24px;
+  font-size:.84rem;
+  font-weight:500;
+  min-width:0;
+}
+.site-footer .footer-links a,
+.privora-footer .privora-footer-main nav a {
+  color:#e2ecf8;
+  text-decoration:none;
+  white-space:nowrap;
+  line-height:1.6;
+}
+.site-footer .footer-links a:hover,
+.site-footer .footer-links a:focus-visible,
+.privora-footer .privora-footer-main nav a:hover,
+.privora-footer .privora-footer-main nav a:focus-visible {
+  color:#83bdff;
+}
+.site-footer .footer-bottom,
+.privora-footer .privora-footer-bottom {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px 20px;
+  border-top:1px solid rgba(255,255,255,.16);
+  margin:0;
+  padding:18px 0 23px;
+  color:#bfd0e3;
+  font-size:.79rem;
+  line-height:1.6;
+}
+.site-footer .footer-bottom a,
+.privora-footer .privora-footer-bottom a {
+  display:inline;
+  margin:0;
+  color:#bfd0e3;
+  text-decoration:none;
+}
+.site-footer .footer-bottom a:hover,
+.privora-footer .privora-footer-bottom a:hover { color:#fff; }
+@media (max-width:1100px) {
+  .site-header .brand-combined,
+  .prv-home-header .prv-brand-combined {width:218px;}
+}
+@media (max-width:850px) {
+  .site-footer .footer-main,
+  .privora-footer .privora-footer-main {
+    align-items:flex-start;
+    flex-direction:column;
+    gap:26px;
+    padding:33px 0 29px;
+  }
+  .site-footer .footer-links,
+  .privora-footer .privora-footer-main nav { justify-content:flex-start; }
+}
+@media (max-width:700px) {
+  .site-header .brand-combined,
+  .prv-home-header .prv-brand-combined { width:219px; max-height:61px; }
+  .site-footer > .container,
+  .privora-footer .privora-footer-inner {width:calc(100% - 40px);}
+  .site-footer .footer-links,
+  .privora-footer .privora-footer-main nav {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:13px 18px;
+    width:min(390px,100%);
+    font-size:.85rem;
+  }
+  .site-footer .footer-main,
+  .privora-footer .privora-footer-main {gap:26px;padding:30px 0 27px;}
+  .site-footer .footer-bottom,
+  .privora-footer .privora-footer-bottom {
+    flex-direction:column;
+    align-items:flex-start;
+    gap:5px;
+    font-size:.76rem;
+    padding:17px 0 22px;
+  }
+}
+@media (max-width:370px) {
+  .site-header .brand-combined,
+  .prv-home-header .prv-brand-combined {width:min(205px,calc(100vw - 100px));}
+  .site-footer > .container,
+  .privora-footer .privora-footer-inner {width:calc(100% - 32px);}
+  .site-footer .footer-brand,
+  .privora-footer .privora-footer-brand {font-size:1.15rem;gap:10px;}
+  .site-footer .footer-mark,
+  .privora-footer .privora-footer-brand > img {width:40px;height:49px;}
+  .site-footer .footer-word small,
+  .privora-footer .privora-footer-brand small {font-size:.45rem;}
+}

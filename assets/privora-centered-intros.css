@@ -1,0 +1,86 @@
+/* Consistent centered section introductions – PRIVORA. Only section headings and descriptions change. */
+/* Home page: Unsere Leistungen */
+section.imported-services .imported-services-head {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap:0;
+}
+section.imported-services .imported-services-head > div {
+  flex:none;
+  width:100%;
+  min-width:0;
+}
+section.imported-services .imported-services-head .eyebrow {
+  display:flex;
+  width:max-content;
+  max-width:100%;
+  justify-content:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+section.imported-services .imported-services-head .imported-title {
+  max-width:920px;
+  margin-left:auto;
+  margin-right:auto;
+}
+section.imported-services .imported-services-head > .imported-copy {
+  flex:none;
+  width:100%;
+  max-width:850px;
+  margin:18px auto 0;
+  text-align:center;
+}
+/* Home page: PRIVORA / Menschen. Lösungen. Vertrauen. */
+section.imported-values > .container > .eyebrow {
+  display:flex;
+  width:max-content;
+  max-width:100%;
+  justify-content:center;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+section.imported-values > .container > .imported-title {
+  max-width:920px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+section.imported-values > .container > .imported-copy {
+  max-width:830px;
+  margin:20px auto 0;
+  text-align:center;
+}
+/* Services and building-details pages: Passend zu Ihrem Objekt */
+#objekttypen .object-showcase-head {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  text-align:center;
+}
+#objekttypen .object-showcase-head > div {
+  width:100%;
+  text-align:center;
+}
+#objekttypen .object-showcase-kicker {
+  justify-content:center;
+}
+#objekttypen .object-showcase-head .object-showcase-title {
+  max-width:920px;
+  margin:12px auto 0;
+  text-align:center;
+}
+#objekttypen .object-showcase-head .object-showcase-copy {
+  max-width:875px;
+  margin:0 auto;
+  text-align:center;
+}
+@media(max-width:600px){
+  section.imported-services .imported-services-head > .imported-copy {margin-top:15px;}
+  #objekttypen .object-showcase-head {gap:14px;}
+}

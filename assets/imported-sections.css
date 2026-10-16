@@ -1,0 +1,51 @@
+/* Complete supplied sections, adapted to the PRIVORA navy and azure palette. */
+.imported-services{padding:84px 0 90px;background:#fff}
+.imported-services-head{display:flex;justify-content:space-between;align-items:flex-end;gap:42px;margin-bottom:38px}
+.imported-services-head>div{flex:1 1 60%;min-width:0}
+.imported-title{font-size:clamp(2rem,3.5vw,3rem);line-height:1.1;letter-spacing:-.045em;max-width:780px;text-wrap:balance}
+.imported-copy{max-width:750px;font-size:1rem;line-height:1.75;color:var(--muted)}
+.imported-services-head>.imported-copy{flex:0 1 370px;font-size:.94rem}
+.imported-services .eyebrow,.imported-values .eyebrow{margin-bottom:17px}
+.imported-services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+.imported-service-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #dce6f1;border-radius:17px;background:linear-gradient(145deg,#fff,#f4f8fe);box-shadow:0 12px 35px #092b5910;transition:transform .25s,border-color .25s,box-shadow .25s}
+.imported-service-card:hover{transform:translateY(-5px);border-color:#8ec3ff;box-shadow:0 19px 40px #092b5918}
+.imported-service-image{width:100%;overflow:hidden;background:#eef4fa;flex-shrink:0}
+.imported-service-image img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;transform:none}
+.imported-service-content{display:flex;flex:1;flex-direction:column;padding:25px 23px 27px;min-width:0}
+.imported-service-content h3{font-size:1.31rem;letter-spacing:-.035em;line-height:1.2;color:var(--navy);overflow-wrap:break-word}
+.imported-service-content>p{font-size:.92rem;line-height:1.65;margin-top:12px;color:var(--muted)}
+.imported-service-list{display:grid;grid-template-columns:1fr;gap:8px;margin:20px 0 0;padding:0;list-style:none}
+.imported-service-list li{display:flex;align-items:flex-start;gap:10px;color:#354c69;font-size:.86rem;font-weight:500;line-height:1.5}
+.imported-service-list li:before{content:'•';flex:0 0 6px;color:var(--blue);font-size:1.1rem;line-height:1.15}
+.imported-service-content>.imported-service-tagline{font-size:.88rem;font-weight:700;color:var(--blue-dark);margin-top:21px;margin-bottom:22px}
+.imported-service-link{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:24px;color:var(--blue-dark);font-size:.88rem;font-weight:600;border-bottom:1px solid #a9cbf5;padding:8px 0 6px}
+.imported-service-link:after{content:'→';font-size:1.25rem;line-height:1;transition:transform .2s}
+.imported-service-link:hover{color:var(--navy)}
+.imported-service-link:hover:after{transform:translateX(4px)}
+.imported-values{padding:82px 0 88px;color:white;background:linear-gradient(125deg,#04172e,#08264a 80%,#0b315b);position:relative;overflow:hidden}
+.imported-values .eyebrow{color:#a7d2ff}
+.imported-values .imported-title{color:#fff}
+.imported-values .imported-copy{color:#bdcde0;margin-top:20px}
+.imported-values-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px}
+.imported-value-card{padding:29px 27px 28px;min-height:227px;border:1px solid #41617f88;border-radius:17px;background:#ffffff07;box-shadow:inset 0 1px 0 #ffffff05;transition:background .25s,border-color .25s,transform .25s}
+.imported-value-card:hover{background:#1479e515;border-color:#4a95e4b3;transform:translateY(-3px)}
+.imported-gif-wrap{display:grid;place-items:center;width:58px;height:58px;overflow:hidden;border-radius:15px;background:transparent;box-shadow:0 10px 24px #00102133}
+.imported-gif{display:block;width:58px;height:58px;max-width:none;object-fit:contain}
+.imported-value-card h3{font-size:1.18rem;line-height:1.35;letter-spacing:-.025em;margin:20px 0 9px;color:#fff}
+.imported-value-card p{font-size:.91rem;line-height:1.65;color:#c5d4e6}
+.service-detail-photo>img.imported-detail-image{height:auto;max-height:440px;object-fit:contain}
+@media(max-width:1040px){.imported-services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.imported-services-head{display:block}.imported-services-head>.imported-copy{max-width:760px;margin-top:21px}.imported-value-card{padding:25px 22px}.imported-value-card h3{font-size:1.08rem}}
+@media(max-width:780px){.imported-values-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.imported-values{padding:63px 0 68px}.imported-services{padding:63px 0 68px}.imported-service-content{padding:23px 20px 25px}.imported-service-content h3{font-size:1.2rem}.imported-service-content>p{font-size:.88rem}.imported-service-list li{font-size:.83rem}}
+@media(max-width:680px){.imported-services,.imported-values{padding:54px 0 58px}.imported-title{font-size:2rem;line-height:1.14}.imported-services-head{margin-bottom:29px}.imported-services-head>.imported-copy{font-size:.92rem;margin-top:18px}.imported-services-grid{grid-template-columns:1fr;gap:23px}.imported-service-card{border-radius:14px}.imported-service-content{padding:24px 22px 26px}.imported-service-content h3{font-size:1.34rem}.imported-service-content>p{font-size:.93rem}.imported-service-list li{font-size:.88rem}.imported-service-list{gap:9px}.imported-service-content>.imported-service-tagline{font-size:.9rem}.imported-values-grid{grid-template-columns:1fr;gap:15px;margin-top:30px}.imported-copy{font-size:.93rem}.imported-value-card{min-height:196px;padding:25px 24px;border-radius:14px}.imported-value-card h3{font-size:1.21rem;margin-top:18px}.imported-value-card p{font-size:.94rem}.imported-gif-wrap,.imported-gif{width:54px;height:54px}.imported-service-link{font-size:.9rem}}
+@media(prefers-reduced-motion:reduce){.imported-service-card,.imported-value-card,.imported-service-link:after{transition:none}.imported-service-card:hover,.imported-value-card:hover{transform:none}}
+
+
+/* Equal image framing for service cards on the homepage. */
+.imported-service-image{aspect-ratio:16 / 10;display:block}
+.imported-service-image img{width:100%;height:100%;object-fit:cover;object-position:center center}
+.imported-service-image[data-label="Büroreinigung"] img,
+.imported-service-image[aria-label*="Büroreinigung"] img{object-position:center 52%}
+.imported-service-image[data-label="Hausmeisterservice"] img{object-position:center 48%}
+@media(max-width:680px){
+  .imported-service-image{aspect-ratio:16 / 10}
+}

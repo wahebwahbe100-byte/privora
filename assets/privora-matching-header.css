@@ -1,0 +1,64 @@
+/* PRIVORA header: independent, pixel-matched counterpart of the homepage site header. */
+.prv-home-header,.prv-home-header *{box-sizing:border-box}
+.prv-home-header{height:88px;background:#fff;position:fixed;top:0;left:0;right:0;z-index:150;border-bottom:1px solid #edf0f5;font-family:Arial,Helvetica,sans-serif;color:#0a2143;line-height:1.6;isolation:isolate;}
+.prv-home-header a{color:inherit;text-decoration:none}
+.prv-home-header button{font:inherit;cursor:pointer}
+.prv-home-header a,.prv-home-header button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.prv-home-header a:focus-visible,.prv-home-header button:focus-visible{outline:3px solid #52a6ff;outline-offset:5px}
+.prv-home-header .prv-header-inner{height:100%;width:min(1180px,calc(100% - 64px));margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.prv-home-header .prv-brand{display:inline-flex;align-items:center;gap:12px;flex-shrink:0}
+.prv-home-header .prv-brand-logo{width:72px;height:72px;object-fit:contain;display:block;flex:0 0 auto}
+.prv-home-header .prv-brand-text{display:grid;gap:3px;line-height:1.05;white-space:nowrap}
+.prv-home-header .prv-brand-title{display:block;color:#071c38;font-size:1.38rem;font-weight:800;letter-spacing:.08em}
+.prv-home-header .prv-brand-subtitle{display:block;color:#55647b;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.prv-home-header .prv-site-nav{display:flex;gap:33px;align-items:center}
+.prv-home-header .prv-site-nav>a{position:relative;padding:30px 0;font-size:.87rem;font-weight:500;line-height:1.6;white-space:nowrap}
+.prv-home-header .prv-site-nav>a::after{position:absolute;content:'';bottom:21px;left:0;width:0;height:2px;background:#0879f9;transition:width .2s}
+.prv-home-header .prv-site-nav>a:hover::after,.prv-home-header .prv-site-nav>a[aria-current=page]::after{width:100%}
+.prv-home-header .prv-site-nav>a[aria-current=page]{color:#075bd0}
+.prv-home-header .prv-btn{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:54px;padding:15px 25px;border-radius:7px;background:#0879f9;border:1px solid #0879f9;color:#fff;font-size:.94rem;line-height:1.3;font-weight:600;transition:background .2s,transform .2s,box-shadow .2s;text-align:center}
+.prv-home-header .prv-btn:hover{background:#075bd0;border-color:#075bd0;box-shadow:0 7px 20px #0475f729}
+.prv-home-header .prv-btn-dark{background:#071c38;border-color:#071c38;color:#fff}
+.prv-home-header .prv-btn-dark:hover{background:#11365d;border-color:#11365d}
+.prv-home-header .prv-btn:hover .prv-arrow{transform:translateX(4px)}
+.prv-home-header .prv-icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;max-width:none}
+.prv-home-header .prv-arrow{width:21px;height:21px;transition:transform .2s}
+.prv-home-header .prv-header-cta{min-height:44px;font-size:.78rem;padding:12px 20px;gap:15px}
+.prv-home-header .prv-header-toggle{display:none;width:44px;height:44px;background:transparent;border:1px solid #dce4ee;border-radius:6px;align-items:center;justify-content:center;color:#071c38;padding:0;min-height:0}
+.prv-home-header .prv-mobile-cta{display:none!important}
+@media(max-width:1100px){
+  .prv-home-header .prv-site-nav{gap:22px}
+  .prv-home-header .prv-header-cta{font-size:.74rem;padding:11px 15px}
+  .prv-home-header .prv-brand-logo{width:66px;height:66px}
+  .prv-home-header .prv-brand-title{font-size:1.26rem}
+  .prv-home-header .prv-brand-subtitle{font-size:.63rem}
+}
+@media(max-width:900px){
+  .prv-home-header{height:77px}
+  .prv-home-header .prv-site-nav{gap:19px}
+  .prv-home-header .prv-site-nav>a{font-size:.8rem}
+  .prv-home-header .prv-header-cta{display:none}
+}
+@media(max-width:700px){
+  .prv-home-header{height:73px}
+  .prv-home-header .prv-header-inner{width:calc(100% - 40px)}
+  .prv-home-header .prv-brand-logo{height:60px;width:60px}
+  .prv-home-header .prv-brand-text{gap:2px}
+  .prv-home-header .prv-brand-title{font-size:1.08rem}
+  .prv-home-header .prv-brand-subtitle{font-size:.56rem;letter-spacing:.03em}
+  .prv-home-header .prv-header-toggle{display:flex}
+  .prv-home-header .prv-site-nav{position:fixed;inset:73px 0 auto;max-height:calc(100dvh - 73px);overflow:auto;background:#fff;padding:18px 24px 28px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid #dce4ee;box-shadow:0 18px 30px #071c3812;display:none}
+  .prv-home-header .prv-site-nav.open{display:flex}
+  .prv-home-header .prv-site-nav>a{font-size:1rem;padding:17px 0;border-bottom:1px solid #edf1f7;white-space:normal}
+  .prv-home-header .prv-site-nav>a::after{bottom:9px;width:0!important}
+  .prv-home-header .prv-site-nav>a[aria-current=page]{font-weight:600}
+  .prv-home-header .prv-site-nav .prv-mobile-cta{display:flex!important;margin-top:20px;padding:17px 20px;color:#fff;border:0}
+}
+@media(max-width:370px){.prv-home-header .prv-header-inner{width:calc(100% - 32px)}.prv-home-header .prv-brand-logo{width:54px;height:54px}.prv-home-header .prv-brand-text{max-width:130px;white-space:normal}.prv-home-header .prv-brand-title{font-size:.98rem}.prv-home-header .prv-brand-subtitle{font-size:.5rem;line-height:1.15}}
+@media(prefers-reduced-motion:reduce){.prv-home-header *{transition:none!important}}
+
+/* New user-supplied emblem + EXACT original PRIVORA wordmark */
+.prv-home-header .prv-brand-combined{display:block;width:215px;height:auto;max-height:58px;object-fit:contain;flex-shrink:0}
+@media(max-width:1100px){.prv-home-header .prv-brand-combined{width:200px}}
+@media(max-width:700px){.prv-home-header .prv-brand-combined{width:205px}}
+@media(max-width:370px){.prv-home-header .prv-brand-combined{width:185px}}

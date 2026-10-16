@@ -1,0 +1,23 @@
+PRIVORA – New hero images
+Created using the built-in image generation tool.
+Slide 1: assets/glasreinigung-hero.png (original image restored)
+Slide 2: assets/hero-oberflaechenreinigung-neu.png
+Slide 3: assets/hero-treppenhaus-neu.png
+
+Generation prompts:
+
+Surface cleaning (current slide 2; original generation prompt)
+Use case: ads-marketing.
+Asset type: replacement first hero photograph for PRIVORA, a German professional building cleaning website with navy blue and electric blue colors.
+Primary request: create an original, premium, photorealistic wide landscape 16:9 hero photograph of professional office surface cleaning. A different scene from window cleaning, floor cleaning machines or staircase cleaning equipment.
+Scene: elegant contemporary German office with large softly out-of-focus windows, glass partitions and a little natural greenery. In the right half foreground, a single anatomically correct hand wearing a cobalt-blue nitrile glove and a neat navy work sleeve wipes a pristine pale grey stone reception counter with a folded rich blue microfiber cloth. Only hand and short forearm enter from the right edge. Precise convincing contact between hand, cloth and counter, clean natural materials, nuanced realistic reflections. The cloth and hand sit around 75 percent across and 60 percent down the frame, so they remain visible in a very wide website crop.
+Composition: sophisticated close-up commercial photography, low counter-level camera, shallow depth of field, polished but believable. Left 45 percent is quiet darker cool blue background and uncluttered counter for white HTML headline overlay; brighter airy daylight on the right. Full-bleed 16:9 image, harmonious with a navy and blue cleaning brand. No text, no logos, no watermark, no interface, no graphic overlays, no magical sparkle, no extra fingers, no face, no full person.
+
+Floor cleaning (unused alternative; original generation prompt)
+Use case: ads-marketing. Asset type: landscape photo for slide 2 in the homepage hero of PRIVORA, a premium German building cleaning company, navy blue and electric blue website.
+Create one original ultra photorealistic commercial photograph, wide horizontal 16:9 composition, high resolution. Scene: a spotless contemporary office lobby with floor-to-ceiling glass windows, elegant pale grey stone flooring, restrained plants and soft daylight, recognizable as a professional European business interior. Main subject in right third: a compact modern professional floor scrubber with deep navy and subtle blue accents, convincing functional construction and realistic floor contact, with a gently reflective freshly cleaned floor. No operator or other people. Wide architectural photography, natural believable material texture, refined light, premium understated corporate look. Keep the left 45 percent simple and visually quiet in cool softly shaded tones for website headline overlay. The floor and the scrubber should remain visually recognizable when cropped to a wide banner. Full-bleed single photograph. No text, no logo, no watermarks, no UI, no collage, no overlaid gradients, no exaggerated sparkle.
+
+Slide 3
+Use case: ads-marketing. Asset type: landscape photo for slide 3 in the homepage hero of PRIVORA, a premium German building cleaning company, navy blue and electric blue website.
+Create one original ultra photorealistic commercial photograph, wide horizontal 16:9 composition, high resolution. Scene: a beautiful immaculate modern building entrance with broad light grey stone steps and elegant glass railings curving gently upward at the back right, modern polished stone landing and clean glass doors, calm natural daylight. Main subject in the right third foreground: neatly arranged professional cleaning equipment, a realistic dark navy cleaning caddy holding an unlabeled spray bottle, neatly folded vivid blue microfiber cloths, and a realistic flat mop resting diagonally nearby. Premium professional architectural/product photography, coherent perspective and authentic material textures, softly shaded cool navy tones on the left, luminous clean white and blue on the right, visually distinct from an office desk image. Keep the left 45 percent uncluttered for white website text overlay; frame right-side subjects with room for wide banner cropping. No people. Full-bleed single photographic scene. No text, labels, branding, watermarks, UI, split layouts, collage, exaggerated sparkle or artificial overlay.
+

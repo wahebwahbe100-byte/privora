@@ -1,0 +1,6 @@
+/* Keep office image and title clickable without affecting the site layout. */
+.imported-service-card .imported-service-image[href] { display: block; cursor: pointer; }
+.imported-service-card .imported-service-content h3 a { color: inherit; text-decoration: none; }
+.imported-service-card .imported-service-content h3 a:hover { color: #0879f9; }
+.imported-service-card .imported-service-content h3 a:focus-visible,
+.imported-service-card .imported-service-image[href]:focus-visible { outline: 3px solid #0879f9; outline-offset: 3px; }
