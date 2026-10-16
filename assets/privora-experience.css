@@ -681,3 +681,22 @@ main > section { content-visibility: visible; contain-intrinsic-size: none; }
   .site-header .site-nav > a,
   .prv-home-header .prv-site-nav > a { transition: none !important; }
 }
+
+/* Compact content-sized hero on phones: Über uns and Kontakt only.
+   The image remains behind the copy; no unnecessary empty space below it. */
+@media (max-width: 700px) {
+  .page-hero.page-hero--ueber-uns,
+  .page-hero.page-hero--kontakt {
+    min-height: 0;
+    height: auto;
+    padding: clamp(36px, 9vw, 48px) 0 clamp(44px, 11vw, 60px);
+    display: flex;
+    align-items: flex-start;
+    background-position: center, center, center 48%;
+  }
+  .page-hero.page-hero--ueber-uns > .container,
+  .page-hero.page-hero--kontakt > .container {
+    position: relative;
+    z-index: 2;
+  }
+}
